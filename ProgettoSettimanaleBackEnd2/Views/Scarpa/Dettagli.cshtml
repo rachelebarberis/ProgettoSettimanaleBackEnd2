@@ -1,52 +1,41 @@
-﻿@model Scarpa  
+﻿@model Scarpa
 
 @{
     ViewData["Title"] = "Dettagli Scarpe";
 }
 
-<h4 class="text-center mb-4">Dettagli della Scarpa</h4>
-
+<h4 class="text-center mb-4 text-primary">Dettagli della Scarpa</h4>
+<a href="@Url.Action("Index", "Scarpa")" class="btn btn-primary m-3">Torna alla lista</a>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-
-            <img src="@Model.Img" class="img-fluid" alt="@Model.Nome">
-
-
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+          
+            <img src="@Model.Img" class="img-fluid rounded shadow-lg" alt="@Model.Nome">
         </div>
 
-
         <div class="col-md-6">
-            <div class="row d-flex flex-column">
-                <div class="col-3">
-                  <h2 class="text-secondary">Dettagli</h2>
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <h2 class="text-secondary">Dettagli</h2>
+                    <h1 class="text-dark">@Model.Nome</h1>
+                    <p><strong class="text-muted">Prezzo:</strong> € @Model.Prezzo</p>
+                    <p><strong class="text-muted">Descrizione:</strong> @Model.Descrizione</p>
                 </div>
-				<div class="col-9">
-					<h1>@Model.Nome</h1>
-					<p><strong>Prezzo:</strong> € @Model.Prezzo</p>
-					<p><strong>Descrizione:</strong> @Model.Descrizione</p>
-				</div>
-                <div class="col-2">
+             
                
-                </div>
             </div>
-           
         </div>
     </div>
-    <div class="row">
+
+    <div class="row mt-4">
         <h5 class="mt-3">Immagini aggiuntive:</h5>
 
-      
-        
-            <img src="@Model.AddImg1" class="img-thumbnail mt-2" alt="Altra immagine">
-        
+        <div class="col-md-6 col-12 mb-3">
+            <img src="@Model.AddImg1" class="img-thumbnail shadow-sm w-100 rounded" alt="Altra immagine">
+        </div>
 
-           
-                <img src="@Model.AddImg2" class="img-thumbnail mt-2" alt="Altra immagine">
-            
-
-       
+        <div class="col-md-6 col-12 mb-3">
+            <img src="@Model.AddImg2" class="img-thumbnail shadow-sm w-100 rounded" alt="Altra immagine">
+        </div>
     </div>
-   
 </div>
-
