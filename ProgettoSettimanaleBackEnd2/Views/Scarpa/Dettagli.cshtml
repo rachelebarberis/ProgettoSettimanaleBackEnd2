@@ -18,7 +18,8 @@
                 <div>
                     <h2 class="text-secondary">Dettagli</h2>
                     <h1 class="text-dark">@Model.Nome</h1>
-                    <p><strong class="text-muted">Prezzo:</strong> € @Model.Prezzo</p>
+                    <p><strong class="text-muted">Prezzo:</strong> € @Model.Prezzo.ToString("C")
+                    </p>
                     <p><strong class="text-muted">Descrizione:</strong> @Model.Descrizione</p>
                 </div>
              
