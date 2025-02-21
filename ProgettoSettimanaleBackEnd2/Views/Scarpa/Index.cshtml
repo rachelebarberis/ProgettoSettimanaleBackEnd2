@@ -1,0 +1,27 @@
+﻿@model ScarpeView
+@{
+    ViewData["Title"] = "Scarpe";
+}
+
+
+
+<h4 class="text-center mb-4">Lista Scarpe</h4>
+
+<div class="container">
+    <div class="row">
+        @foreach (var scarpa in Model.Scarpe)
+        {
+            <div class="col-md-4">
+                <div class="card shadow-sm mb-4">
+                    <img src="@scarpa.Img" class="card-img-top" alt="@scarpa.Nome">
+                    <div class="card-body">
+                        <h5 class="card-title">@scarpa.Nome</h5>
+                        <p class="card-text"><strong>Prezzo:</strong> € @scarpa.Prezzo</p>
+                        <p class="card-text">@scarpa.Descrizione</p>
+                        <a class="btn btn-primary" asp-controller="Scarpa" asp-action="Dettagli" asp-route-id="@scarpa.Id">Dettagli</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
