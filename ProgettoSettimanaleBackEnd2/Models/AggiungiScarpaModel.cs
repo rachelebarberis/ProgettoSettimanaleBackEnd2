@@ -18,5 +18,17 @@ namespace ProgettoSettimanaleBackEnd2.Models
         [Required(ErrorMessage = "La descrizione è obbligatoria!")]
         [StringLength(2000, ErrorMessage = "La descrizione deve essere compresa tra 5 e 2000 caratteri", MinimumLength = 5)]
         public string? Descrizione { get; set; }
+
+        [Display(Name = "Immagine di copertina")]
+        [Required(ErrorMessage = "Metti un'ulteriore immagine aggiuntiva!")]
+        public string? Img { get; set; }
+
+        [Display(Name = "Immagine Aggiuntiva 1")]
+        [Required(ErrorMessage = "Metti un'ulteriore immagine aggiuntiva!")]
+        public string? AddImg1 { get; set; }
+
+        [Display(Name = "Immagine Aggiuntiva 2")]
+        [Required(ErrorMessage = "Metti un'altra immagine aggiuntiva!")]
+        public string? AddImg2 { get; set; }
     }
 }

@@ -7,6 +7,7 @@
         public decimal? Prezzo { get; set; }
         public string? Descrizione { get; set; }
         public string? Img { get; set; }
-        public List<string>? AddImg { get; set; }
+        public string? AddImg1 { get; set; }
+        public string? AddImg2 { get; set; }
     }
 }

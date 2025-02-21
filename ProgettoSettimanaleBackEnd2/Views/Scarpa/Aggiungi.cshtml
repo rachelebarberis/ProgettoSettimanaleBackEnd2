@@ -22,6 +22,20 @@
             <label for="Descrizione">Descrizione</label>
             <textarea class="form-control" id="Descrizione" name="Descrizione"></textarea>
         </div>
+        <div class="form-group">
+            <label for="Img">Immagine di copertina</label>
+            <input type="url" class="form-control" id="Img" name="Img" />
+        </div>
+
+        <div class="form-group">
+            <label for="AddImg1">Immagine aggiuntiva 1</label>
+            <input type="url" class="form-control" id="AddImg1" name="AddImg1" />
+        </div>
+
+        <div class="form-group">
+            <label for="AddImg2">Immagine aggiuntiva 2</label>
+            <input type="url" class="form-control" id="AddImg2" name="AddImg2" />
+        </div>
         <button type="submit" class="btn btn-success">Aggiungi</button>
         <a href="@Url.Action("Index", "Scarpa")" class="btn btn-secondary">Torna alla lista</a>
     </form>

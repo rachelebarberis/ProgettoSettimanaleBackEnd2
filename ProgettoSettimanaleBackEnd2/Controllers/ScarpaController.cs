@@ -15,11 +15,8 @@ namespace ProgettoSettimanaleBackEnd2.Controllers
                 Prezzo = 120.65m,
                 Descrizione = "Scarpa comoda e versatile",
                 Img = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                AddImg = new List<string>
-                {
-                    "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                    "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg"
-                }
+                AddImg1 = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
+                AddImg2 ="/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
             },
             new Scarpa
             {
@@ -28,11 +25,8 @@ namespace ProgettoSettimanaleBackEnd2.Controllers
                 Prezzo = 110.50m,
                 Descrizione = "Scarpa elegante per ogni occasione",
                 Img = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                AddImg = new List<string>
-                {
-                    "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                    "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg"
-                }
+                AddImg1 = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
+                AddImg2 ="/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
             }
         };
 
@@ -80,6 +74,10 @@ namespace ProgettoSettimanaleBackEnd2.Controllers
                 Nome = model.Nome,
                 Prezzo = model.Prezzo,
                 Descrizione = model.Descrizione,
+                Img = model.Img,
+                AddImg1 = model.AddImg1,
+                AddImg2 = model.AddImg2
+
 
             };
 
