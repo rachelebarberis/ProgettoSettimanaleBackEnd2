@@ -8,21 +8,31 @@
 <h4 class="text-center mb-4">Lista Scarpe</h4>
 
 <div class="container">
-    <a class="btn btn-danger" asp-controller="Scarpa" asp-action="Aggiungi"> Aggiungi</a>
+	 <a class="btn btn-danger mb-3" asp-controller="Scarpa" asp-action="Aggiungi"> Aggiungi</a>
+   
     <div class="row">
         @foreach (var scarpa in Model.Scarpe)
         {
             <div class="col-md-4">
-                <div class="card shadow-sm mb-4">
-                    <img src="@scarpa.Img" class="card-img-top" alt="@scarpa.Nome">
+                <div class="card shadow-sm mb-4 w-100">
+                    <img src="@scarpa.Img" class="card-img-top" style="height: 300px; object-fit: cover;" alt="@scarpa.Nome">
                     <div class="card-body">
-                        <h5 class="card-title">@scarpa.Nome</h5>
-                        <p class="card-text"><strong>Prezzo:</strong> € @scarpa.Prezzo</p>
-                        <a class="btn btn-primary" asp-controller="Scarpa" asp-action="Dettagli" asp-route-id="@scarpa.Id">Dettagli</a>
+                   
+                         
+                        <h5 class="card-title fw-bold">@scarpa.Nome</h5>
+                        <p class="card-text  fw-normal"><strong>Prezzo:</strong> € @scarpa.Prezzo</p>
+
                     </div>
-                    <div>
-                        <a class="btn btn-warning" asp-controller="Scarpa" asp-action="Modifica" asp-route-id="@scarpa.Id">Modifica</a>
-                        <a class="btn btn-danger" asp-controller="Scarpa" asp-action="Elimina" asp-route-id="@scarpa.Id">Elimina</a>
+                    
+                    <div class=" row">
+
+						<div class=" d-flex justify-content-around mt-2 ">
+                            <a class="btn btn-light btn-outline-secondary mb-2" asp-controller="Scarpa" asp-action="Dettagli" asp-route-id="@scarpa.Id">Dettagli</a>
+                            <a class="btn btn-light btn-outline-secondary mb-2 " asp-controller="Scarpa" asp-action="Modifica" asp-route-id="@scarpa.Id">Modifica</a>
+                        <a class="btn btn-light btn-outline-secondary mb-2" asp-controller="Scarpa" asp-action="Elimina" asp-route-id="@scarpa.Id">Elimina</a>
+                        </div>
+                      
+                       
                     </div>
                     
                 </div>

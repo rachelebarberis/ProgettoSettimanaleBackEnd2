@@ -14,20 +14,60 @@ namespace ProgettoSettimanaleBackEnd2.Controllers
                 Nome = "Dunk Rosa",
                 Prezzo = 120.65m,
                 Descrizione = "Scarpa comoda e versatile",
-                Img = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                AddImg1 = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                AddImg2 ="/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
+                Img = "https://basecesena.com/cdn/shop/products/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpg?v=1653326146&width=",
+                AddImg1 = "https://basecesena.com/cdn/shop/products/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpg?v=1653326146&width=",
+                AddImg2 ="https://basecesena.com/cdn/shop/products/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpg?v=1653326146&width=",
             },
             new Scarpa
             {
                 Id = 2,
                 Nome = "Dunk Nere e Bianche",
                 Prezzo = 110.50m,
-                Descrizione = "Scarpa elegante per ogni occasione",
-                Img = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                AddImg1 = "/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-                AddImg2 ="/img/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpeg",
-            }
+                Descrizione = "Scarpa versatile e utilizzabile per ogni occasione",
+                Img = "https://basecesena.com/cdn/shop/products/Nike_Dunk_Low_Black_White_Panda_gs_CW1590-100__Hype_Clothinga_Limited_Edition.3-thumbnail-1080x1080-70.jpg?v=1670437848&width=1200",
+                AddImg1 = "https://basecesena.com/cdn/shop/products/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpg?v=1653326146&width=",
+                AddImg2 ="https://basecesena.com/cdn/shop/products/image_c79e344a-ec9e-4f68-bac0-1304b5616d9e.jpg?v=1653326146&width=",
+            },
+             new Scarpa
+            {
+                Id = 3,
+                Nome = "Dunk Grigie",
+                Prezzo = 120.65m,
+                Descrizione = "Scarpa comoda e versatile",
+                Img = "https://images.prodirectsport.com/ProductImages/Main/261348_Main_Thumb_1701048.jpg?imwidth=1440",
+                AddImg1 = "https://images.prodirectsport.com/ProductImages/Main/261348_Main_Thumb_1701048.jpg?imwidth=1440",
+                AddImg2 ="https://images.prodirectsport.com/ProductImages/Main/261348_Main_Thumb_1701048.jpg?imwidth=1440",
+            },
+              new Scarpa
+            {
+                Id = 4,
+                Nome = "Dunk Petrolio",
+                Prezzo = 120.65m,
+                Descrizione = "Scarpa comoda e versatile",
+                Img = "https://images.prodirectsport.com/ProductImages/Main/1014969_Main_1791621.jpg?imwidth=1440",
+                AddImg1 = "https://images.prodirectsport.com/ProductImages/Main/1014969_Main_1791621.jpg?imwidth=1440",
+                AddImg2 ="https://images.prodirectsport.com/ProductImages/Main/1014969_Main_1791621.jpg?imwidth=1440",
+            },
+               new Scarpa
+            {
+                Id = 5,
+                Nome = "Dunk Bordeaux",
+                Prezzo = 120.65m,
+                Descrizione = "Scarpa comoda e versatile",
+                Img = "https://oblioclothing.com/cdn/shop/products/nike-dunk-low-bordeaux-2-1000.png?v=1648062169&width=1000",
+                AddImg1 = "https://oblioclothing.com/cdn/shop/products/nike-dunk-low-bordeaux-2-1000.png?v=1648062169&width=1000",
+                AddImg2 ="https://oblioclothing.com/cdn/shop/products/nike-dunk-low-bordeaux-2-1000.png?v=1648062169&width=1000",
+            },
+                new Scarpa
+            {
+                Id = 6,
+                Nome = "Dunk Petrolio Tessuto",
+                Prezzo = 120.65m,
+                Descrizione = "Scarpa comoda e versatile",
+                Img = "https://www.overlimit.it/cdn/shop/files/INDUSTRIAL1_550x.jpg?v=1687880423",
+                AddImg1 = "https://www.overlimit.it/cdn/shop/files/INDUSTRIAL1_550x.jpg?v=1687880423",
+                AddImg2 ="https://www.overlimit.it/cdn/shop/files/INDUSTRIAL1_550x.jpg?v=1687880423",
+            },
         };
 
         public IActionResult Index()
