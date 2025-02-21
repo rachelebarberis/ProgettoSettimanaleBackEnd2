@@ -59,5 +59,42 @@ namespace ProgettoSettimanaleBackEnd2.Controllers
             return View(scarpa);
         }
 
+        public IActionResult Aggiungi()
+
+
+        {
+            return View("Aggiungi");
+        }
+
+        [HttpPost]
+        public IActionResult Crea(AggiungiScarpaModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Try again!";
+                return RedirectToAction("Aggiungi", model);
+            }
+            var newScarpa = new Scarpa()
+            {
+                Id = Scarpe.Max(s => s.Id) + 1,
+                Nome = model.Nome,
+                Prezzo = model.Prezzo,
+                Descrizione = model.Descrizione,
+
+            };
+
+            Scarpe.Add(newScarpa);
+            return RedirectToAction("Index");
+        }
+
+      
+
     }
 }
+
+
+
+           
+        
+
+        
