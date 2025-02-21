@@ -20,6 +20,11 @@
                         <p class="card-text"><strong>Prezzo:</strong> € @scarpa.Prezzo</p>
                         <a class="btn btn-primary" asp-controller="Scarpa" asp-action="Dettagli" asp-route-id="@scarpa.Id">Dettagli</a>
                     </div>
+                    <div>
+                        <a class="btn btn-warning" asp-controller="Scarpa" asp-action="Modifica" asp-route-id="@scarpa.Id">Modifica</a>
+                        <a class="btn btn-danger" asp-controller="Scarpa" asp-action="Elimina" asp-route-id="@scarpa.Id">Elimina</a>
+                    </div>
+                    
                 </div>
             </div>
 

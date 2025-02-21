@@ -85,7 +85,70 @@ namespace ProgettoSettimanaleBackEnd2.Controllers
             return RedirectToAction("Index");
         }
 
-      
+        public IActionResult Modifica(int id)
+        {
+            var scarpa = Scarpe.FirstOrDefault(s => s.Id == id);
+            if (scarpa == null)
+            {
+                return NotFound();
+            }
+
+            var model = new AggiungiScarpaModel
+            {
+                Id = scarpa.Id,
+                Nome = scarpa.Nome,
+                Prezzo = scarpa.Prezzo,
+                Descrizione = scarpa.Descrizione,
+                Img = scarpa.Img,
+                AddImg1 = scarpa.AddImg1,
+                AddImg2 = scarpa.AddImg2
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Salva(AggiungiScarpaModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Modifica", model);
+            }
+
+            var scarpa = Scarpe.FirstOrDefault(s => s.Id == model.Id);
+            if (scarpa == null)
+            {
+                return NotFound();
+            }
+
+           
+            scarpa.Nome = model.Nome;
+            scarpa.Prezzo = model.Prezzo;
+            scarpa.Descrizione = model.Descrizione;
+            scarpa.Img = model.Img;
+            scarpa.AddImg1 = model.AddImg1;
+            scarpa.AddImg2 = model.AddImg2;
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Elimina(int id)
+        {
+            var scarpa = Scarpe.FirstOrDefault(s => s.Id == id);
+            if (scarpa == null)
+            {
+                return NotFound();
+            }
+
+            Scarpe.Remove(scarpa);
+
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
 
     }
 }
