@@ -48,15 +48,16 @@ namespace ProgettoSettimanaleBackEnd2.Controllers
 
         public IActionResult Dettagli(int id)
         {
-          
+
             var scarpa = Scarpe.FirstOrDefault(s => s.Id == id);
 
             if (scarpa == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
 
             return View(scarpa);
         }
+
     }
 }
